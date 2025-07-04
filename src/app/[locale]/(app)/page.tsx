@@ -1,10 +1,12 @@
 "use client";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Fragment, useCallback, useMemo, useState } from "react";
+import { Fragment, HTMLAttributeAnchorTarget, useCallback, useMemo, useState } from "react";
 
 type Route = {
   name: string;
+  href: string;
+  target?: HTMLAttributeAnchorTarget;
 }
 
 const Home = () => {
@@ -12,9 +14,20 @@ const Home = () => {
   // States
   const [itemHover, setItemHover] = useState<string | null>(null);
   const domains: Route[] = useMemo(() => [
-    { name: "dev" },
-    { name: "music"},
-    { name: "video" },
+    {
+      name: "dev",
+      href: "https://github.com/lxup",
+      target: "_blank",
+    },
+    {
+      name: "music",
+      href: "https://open.spotify.com/intl-fr/artist/4MbXz8Kvr9wizslkKT4wvJ",
+      target: "_blank",
+    },
+    {
+      name: "video",
+      href: "/video",
+    },
   ], [translations]);
   // Handlers
   const handleMouseEnter = useCallback((name: string) => {
@@ -33,10 +46,10 @@ const Home = () => {
         {domains.map((domain, index) => (
           <Fragment key={index}>
             <li
-            onMouseEnter={() => console.log("onMouseEnter", domain.name)}
-            onMouseLeave={() => console.log("onMouseLeave", domain.name)}
+            onMouseEnter={() => handleMouseEnter(domain.name)}
+            onMouseLeave={handleMouseLeave}
             >
-              <Link href={`/${domain.name}`}>
+              <Link href={domain.href} target={domain.target}>
                 {domain.name}
               </Link>
             </li>
