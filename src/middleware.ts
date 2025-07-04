@@ -5,7 +5,7 @@ import { routing } from './lib/i18n/routing';
 const intlMiddleware = createIntlMiddleware(routing);
 
 export async function middleware(request: NextRequest) {
-  let response = intlMiddleware(request);
+  const response = intlMiddleware(request);
   return (response);
 }
 
