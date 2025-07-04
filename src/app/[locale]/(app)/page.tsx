@@ -16,12 +16,12 @@ const Home = () => {
   const domains: Route[] = useMemo(() => [
     {
       name: "dev",
-      href: "https://github.com/lxup",
+      href: "/dev",
       target: "_blank",
     },
     {
       name: "music",
-      href: "https://open.spotify.com/intl-fr/artist/4MbXz8Kvr9wizslkKT4wvJ",
+      href: "/music",
       target: "_blank",
     },
     {
