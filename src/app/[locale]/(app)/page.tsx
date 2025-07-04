@@ -2,7 +2,7 @@
 import { upperCase } from "lodash";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { Fragment, HTMLAttributeAnchorTarget, useCallback, useMemo, useState } from "react";
+import { Fragment, HTMLAttributeAnchorTarget, useMemo } from "react";
 import Marquee from "react-fast-marquee";
 
 type Route = {
@@ -14,7 +14,6 @@ type Route = {
 const Home = () => {
   const translations = useTranslations("home");
   // States
-  const [itemHover, setItemHover] = useState<string | null>(null);
   const domains: Route[] = useMemo(() => [
     {
       name: "dev",
@@ -32,15 +31,6 @@ const Home = () => {
       target: "_blank",
     },
   ], [translations]);
-  // Handlers
-  const handleMouseEnter = useCallback((name: string) => {
-    console.log("handleMouseEnter", name);
-    setItemHover(name);
-  }, []);
-  const handleMouseLeave = useCallback(() => {
-    console.log("handleMouseLeave");
-    setItemHover(null);
-  }, []);
   return (
     <div className="flex-1 flex flex-col relative">
       <Marquee className="py-2">
@@ -73,8 +63,6 @@ const Home = () => {
           {domains.map((domain, index) => (
             <Fragment key={index}>
               <li
-              onMouseEnter={() => handleMouseEnter(domain.name)}
-              onMouseLeave={handleMouseLeave}
               className="bg-background rounded-full px-4"
               >
                 <Link href={domain.href} target={domain.target}>
