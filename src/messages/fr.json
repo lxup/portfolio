@@ -1,6 +1,10 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "home": {
+    "resume": {
+      "text": "Je suis Loup. J’ai fondé <linkRecomend>Recomend</linkRecomend>, j’étudie à <linkSchool>l’école 42</linkSchool> et je fais de la musique quand le capitalisme me le permet."
+    },
+    "marquee": {
+      "text": "Rien à voir ici, passez votre chemin"
+    }
   }
 }

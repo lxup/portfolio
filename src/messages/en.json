@@ -1,6 +1,10 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+  "home": {
+	"resume": {
+	  "text": "I'm Loup. I founded <linkRecomend>Recomend</linkRecomend>, study at <linkSchool>42 School</linkSchool> and make music when captilism allows it."
+	},
+    "marquee": {
+      "text": "nothing to see here, move along"
+    }
   }
 }

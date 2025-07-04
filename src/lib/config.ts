@@ -1,8 +1,8 @@
 import { getURL } from "./utils";
 
 const config = {
-	siteName: "loup",
-	tagline: "my woooooorrrrrrkkkkkkkssssss",
+	siteName: "Loup",
+	tagline: "Random stuffer",
 	url: getURL(),
 	seo: {
 		description: ""
