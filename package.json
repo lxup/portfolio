@@ -6,10 +6,10 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "type-check": "yarn tsc"
   },
   "dependencies": {
-    "@studio-freight/react-lenis": "^0.0.47",
     "deepmerge": "^4.3.1",
     "lodash": "^4.17.21",
     "next": "15.3.5",
