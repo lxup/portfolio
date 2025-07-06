@@ -1,11 +1,11 @@
 import { getURL } from "./utils";
 
 const config = {
-	siteName: "Loup",
-	tagline: "Random stuffer",
+	siteName: "loup",
+	tagline: "multitasker",
 	url: getURL(),
 	seo: {
-		description: ""
+		description: "i just do stuff, stay ethical without selling my soul to capitalism",
 	},
 	socials: [
 		{

@@ -10,13 +10,15 @@
     "type-check": "yarn tsc"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "deepmerge": "^4.3.1",
     "lodash": "^4.17.21",
     "next": "15.3.5",
     "next-intl": "^4.3.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-fast-marquee": "^1.6.5"
+    "react-fast-marquee": "^1.6.5",
+    "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
